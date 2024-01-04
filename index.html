@@ -1,97 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Lojas</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1c1c1c;
-            color: #ddd;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            text-align: center;
-            color: #e63946; /* Vermelho Tormenta 20 */
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #bbb;
-        }
-
-        select, input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            background-color: #2d2d2d; /* Cinza Escuro */
-            border: 1px solid #333;
-            color: #ddd;
-        }
-
-        button {
-            background-color: #0074cc; /* Azul Tormenta 20 */
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #005691; /* Azul Escuro Tormenta 20 */
-        }
-
-        #loja {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #2d2d2d; /* Cinza Escuro */
-            border: 1px solid #333;
-            border-radius: 5px;
-        }
-
-        p {
-            margin: 0;
-            padding: 5px 0;
-            border-bottom: 1px solid #333;
-        }
-
-        p:last-child {
-            border-bottom: none;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Gerador de Lojas</h1>
 
-    <label for="tipoLoja">Escolha o tipo de loja:</label>
-    <select id="tipoLoja">
-        <option value="itensGerais">Itens Gerais e Ferramentas</option>
-        <option value="vestuario">Vestuario</option>
-        <option value="esotericos">Esotéricos</option>
-        <option value="alquimicos">Alquímicos</option>
-        <option value="contrabando">Contrabando</option>
-        <option value="armas">Armas</option>
-        <option value="modsArmas">Mods</option>
-        <option value="encanArmas">Encantamentos</option>
-        <!-- Adicione mais opções conforme necessário -->
-    </select>
+    <header>
 
-    <label for="taxaVariacao">Taxa de Variação (%)</label>
-    <input type="number" id="taxaVariacao" placeholder="Digite a taxa de variação">
+        <div class="d-flex">
+            <div>
+                <h1 class="h1 display-3">Gerador de loja</h1>
+                <h2>Do Haydão</h2>
+            </div>
+        </div>
 
-    <label for="quantidadeItens">Quantidade de Itens</label>
-    <input type="number" id="quantidadeItens" placeholder="Digite a quantidade de itens">
 
-    <button onclick="gerarLoja()">Gerar Loja</button>
+    </header>
 
-    <div id="loja"></div>
+    <main class="mt-5 my-5 w-100">
 
-    <script src="script.js"></script>
+        <section class="container">
+
+
+            <div class="row mb-4">
+
+                <div class="col-12 w-25">
+                    <label for="tipoLoja">Escolha o tipo de loja:</label>
+                    <select class="form-select" aria-label="Default select example" id="tipoLoja">
+                        <option value="itensGerais">Itens Gerais e Ferramentas</option>
+                        <option value="vestuario">Vestuario</option>
+                        <option value="esotericos">Esotéricos</option>
+                        <option value="alquimicos">Alquímicos</option>
+                        <option value="contrabando">Contrabando</option>
+                        <option value="armas">Armas</option>
+                        <option value="modsArmas">Mods</option>
+                        <option value="encanArmas">Encantamentos</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row mb-4">
+
+                <div class="col-6">
+                    <label for="taxaVariacao">Taxa de Variação (%)</label>
+                    <input type="number" id="taxaVariacao" class="form-control" placeholder="Digite a taxa de variação">
+                </div>
+
+
+                <div class="col-6">
+                    <label for="quantidadeItens">Quantidade de Itens</label>
+                    <input type="number" id="quantidadeItens" class="form-control"
+                        placeholder="Digite a quantidade de itens">
+                </div>
+
+            </div>
+
+            <button onclick="gerarLoja()" class="btn btn-secondary">Gerar Loja</button>
+
+            <div id="loja"></div>
+
+
+        </section>
+    </main>
 </body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
 </html>

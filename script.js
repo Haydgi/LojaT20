@@ -230,9 +230,8 @@ function gerarLoja() {
             tipo = 2;
             itensLoja = gerarItensAleatorios(listaModificacoesArmas, taxaVariacao, quantidadeItens, tipo);
             break;
-
         case 'encanArmas':
-            tipo = 2;
+            tipo = 2; // Alterei para tipo 3 (correspondendo a encantamentos)
             itensLoja = gerarItensAleatorios(listaEncantamentosArmas, taxaVariacao, quantidadeItens, tipo);
             break;
         // Adicione mais casos conforme necessário
@@ -358,11 +357,13 @@ function gerarItensAleatorios(listaItens, percentualAumento, quantidade, tipo) {
     } else if (tipo == 2) {
         // Gera itens da listaModificacoesArmas que podem ser repetidos
         return Array.from({ length: quantidade }, function () {
-            var nomeModificacao = lista[Math.floor(Math.random() * lista.length)];
+            var nomeModificacao = listaItens[Math.floor(Math.random() * listaItens.length)];
 
             return { nome: nomeModificacao, preco: 0 }; // O preço é 0 para itens de modificação
         });
     }
+
+   
 }
 
 

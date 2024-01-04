@@ -1,53 +1,113 @@
+:root {
+    --cor1: #6b0000;
+    --cor2: #201d1b;
+    --cor3: #65743A;
+    --cor4: rgb(158, 149, 111);
+    --cor5: #d9dfb0;
+    --cor6: rgb(105, 100, 78);
+    --cor7: rgb(250, 182, 36);
+    --cor8: rgb(207, 153, 35);
+    --cor9: rgb(160, 116, 21);
+}
+
+.menu-logoSite {
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 40%;
+}
+
+header {
+    height: 60vh;
+    background-image: url(imgs/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-flex {
+    width: 80%;
+    text-align: left;
+}
+
+.d-flex div {
+    display: inline-block;
+    text-align: right;
+
+}
+
+.h1 {
+    font-size: 65px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 2px var(--clr-itp-4), -2px -2px 2px var(--clr-itp-4);
+    border-bottom: 3px solid var(--clr-itp-2);
+    line-height: .8;
+}
+
+header h2 {
+    font-size: 18px;
+    color: white;
+    line-height: 1.4;
+}
+
+h1{
+    border-bottom: 2px;
+    border-color: rgba(207, 207, 207);
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #4d0000, #160600);
+    color: var(--cor5);
     margin: 0;
     padding: 0;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
+.bg-main {
+    background: linear-gradient(to bottom, #4d0000, #160600);
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
+.bg-main a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--cor4);
+    padding-top: 20px;
 }
 
-select, input {
-    width: 100%;
+.bg-main a:hover {
+    color: var(--cor6);
+}
+
+
+.input-class{
+    width: 80%;
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    background-color: #2d2d2d;
+    /* Cinza Escuro */
+    border: 1px solid #333;
+    color: #ddd;
 }
 
-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
 
 #loja {
     margin-top: 20px;
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--cor1);
+    /* Cinza Escuro */
+    border: 1px solid var(--cor8);
     border-radius: 5px;
 }
 
 p {
     margin: 0;
     padding: 5px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--cor9);
 }
 
 p:last-child {
