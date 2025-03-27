@@ -1,0 +1,1 @@
+Feito com proposito de aprendizado e também hobby. O site consegue utilizar a tabela de itens do livro de RPG de mesa "Tormenta 20: Jogo do ano", para gerar uma loja, com variações de preço e quantidades dos itens, para simular um NPC de venda real no mundo do jogo.
